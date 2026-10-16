@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Product Copy Generator</title>
+</head>
+
+<body>
+  <h1>AI Product Copy Generator</h1>
+
+  <p>Generate better product titles and descriptions for e-commerce.</p>
+
+  <textarea
+    id="product"
+    rows="6"
+    cols="50"
+    placeholder="Describe your product..."
+  ></textarea>
+
+  <br><br>
+
+  <button onclick="generate()">Generate</button>
+
+  <h2>Result</h2>
+
+  <div id="result">
+    Your result will appear here.
+  </div>
+
+  <script>
+    function generate() {
+      const product = document.getElementById("product").value;
+
+      if (!product.trim()) {
+        document.getElementById("result").innerText =
+          "Please describe your product first.";
+        return;
+      }
+
+      document.getElementById("result").innerText =
+        "Product received: " + product;
+    }
+  </script>
+</body>
+</html>
